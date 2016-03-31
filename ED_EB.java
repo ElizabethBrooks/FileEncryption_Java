@@ -38,17 +38,12 @@ public class ED_EB{
                new FileOutputStream("./ModEvo_DaphniaMelanica/src/GeneralModel.java"));
 			   encrypt(new FileInputStream("./ModEvo_DaphniaMelanica/src/IndividualFitness.java"), 
                new FileOutputStream("./ModEvo_DaphniaMelanica/src/IndividualFitness.java"));
+            //Encrypt specified file
             encrypt(new FileInputStream("./ModEvo_DaphniaMelanica/src/IndividualTraitOne.java"), 
                new FileOutputStream("./ModEvo_DaphniaMelanica/src/IndividualTraitOne.java"));
-            encrypt(new FileInputStream("./ModEvo_DaphniaMelanica/src/MeanFitnessBySimulation.java"), 
-               new FileOutputStream("./ModEvo_DaphniaMelanica/src/MeanFitnessBySimulation.java"));
-            encrypt(new FileInputStream("./ModEvo_DaphniaMelanica/src/ModEvo.java"), 
-               new FileOutputStream("./ModEvo_DaphniaMelanica/src/ModEvo.java"));
-            encrypt(new FileInputStream("./ModEvo_DaphniaMelanica/src/SpeciesCharacteristics.java"), 
-               new FileOutputStream("./ModEvo_DaphniaMelanica/src/SpeciesCharacteristics.java"));
-            encrypt(new FileInputStream("./ModEvo_DaphniaMelanica/README.txt"), 
-               new FileOutputStream("./ModEvo_DaphniaMelanica/README.txt")); 
-            //decrypt(new FileInputStream("./ModEvo_ModelingEvolutionaryTrajectories/src/GaussianTraitDistribution_ED.java"), new FileOutputStream("./ModEvo_ModelingEvolutionaryTrajectories/src/GaussianTraitDistribution_DE.java"));
+            //Decrypt specified file
+            decrypt(new FileInputStream("./ModEvo_ModelingEvolutionaryTrajectories/src/GaussianTraitDistribution_ED.java"), 
+            	new FileOutputStream("./ModEvo_ModelingEvolutionaryTrajectories/src/GaussianTraitDistribution_DE.java"));
         }
         catch (FileNotFoundException e) {
             System.out.println("File Not Found:" + e.getMessage());
