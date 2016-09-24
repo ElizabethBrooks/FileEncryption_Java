@@ -3,7 +3,6 @@ Author: Elizabeth Brooks
 File: ED_EB.java
 Date Modified: 09/23/2016
 */
-
 //Class imports
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,7 +21,6 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
-
 //Class for encrypting and decrypting specified java files
 public class ED_EB{
     //Class fields
