@@ -1,3 +1,10 @@
+/*
+Author: Elizabeth Brooks
+File: ED_EB.java
+Date Modified: 09/23/2016
+*/
+
+//Class imports
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,8 +23,9 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
 
+//Class for encrypting and decrypting specified java files
 public class ED_EB{
-	
+    //Class fields
     private static Cipher ecipher;
     private static Cipher dcipher;
     // 8-byte initialization vector
@@ -25,7 +33,7 @@ public class ED_EB{
 	  (byte)0xB2, (byte)0x12, (byte)0xD5, (byte)0xB2,
 	  (byte)0x44, (byte)0x21, (byte)0xC3, (byte)0xC3
     };
-	
+    //The main method	
     public static void main(String[] args) {
         try {
             SecretKey key = KeyGenerator.getInstance("DES").generateKey();
@@ -67,7 +75,7 @@ public class ED_EB{
         }
         System.out.println(" COMPLETED");
     }
-	
+    //Encrypting method
     private static void encrypt(InputStream is, OutputStream os) {
 		try {
 			byte[] buf = new byte[1024];
@@ -86,7 +94,7 @@ public class ED_EB{
 		}
       System.out.print("ENCRYPTION");
 	}
-	
+    //Decrypting method	
     private static void decrypt(InputStream is, OutputStream os) {
 		try {
 			byte[] buf = new byte[1024];
@@ -108,3 +116,4 @@ public class ED_EB{
       System.out.print("DECRYPTION");
     }
 }
+//End class
